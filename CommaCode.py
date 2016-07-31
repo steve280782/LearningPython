@@ -1,4 +1,4 @@
-# Define function to convert list to comma seperated list ending with and
+# Define function to convert list to comma seperated list ending with 'and'
 def list2string(printlist):
     # Get length of list and minus last value
     printlistremovelast = (len(printlist) - 1)
