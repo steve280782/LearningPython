@@ -16,8 +16,10 @@ def printboard(board):
     print('-+-+-')
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
+# Print a sample board with references
 printboard(completeBoard)
 print('\r')
+
 # X goes first then alternates with O
 turn = 'X'
 # There are 9 goes
