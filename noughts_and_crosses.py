@@ -1,11 +1,11 @@
 # Noughts and crosses game using dictionaries
-
+import sys
 # Create a blank board
 theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', \
            'low-M': ' ', 'low-R': ' '}
 
-completeBoard = {'top-L': 'top-L', 'top-M': 'top-M', 'top-R': 'top-R', \
-                 'mid-L': 'mid-L', 'mid-M': 'mid-M', 'mid-R': 'mid-R', \
+completeBoard = {'top-L': 'top-L', 'top-M': 'top-M', 'top-R': 'top-R',
+                 'mid-L': 'mid-L', 'mid-M': 'mid-M', 'mid-R': 'mid-R',
                  'low-L': 'low-L', 'low-M': 'low-M', 'low-R': 'low-R'}
 
 # Function to print board to screen
@@ -25,11 +25,16 @@ turn = 'X'
 # There are 9 goes
 for i in range(9):
     printboard(theBoard)
-    print('Turn for ' + turn + '. Move on which space?')
+    print('Turn for ' + turn + '. Move on which space?\n(press q to quit)')
     move = input()
-    theBoard[move] = turn
-    if turn == 'X':
-        turn = 'O'
+    if move == 'q':
+        sys.exit()
     else:
-        turn = 'X'
-printboard(theBoard)
+        theBoard[move] = turn
+        if turn == 'X':
+            turn = 'O'
+        else:
+            turn = 'X'
+# printboard(theBoard)
+else:
+    sys.exit()
