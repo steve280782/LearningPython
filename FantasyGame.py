@@ -8,8 +8,7 @@ def displayInventory(stuff):
 def addToInventory(stuff, addedItems):
     for k in addedItems:
         if k in stuff.keys():
-            #stuff[k] = stuff.values() + 1
-            print(k)
+            stuff[k] = stuff[k] + 1
 
 # Inventory dictionary
 inventory = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
@@ -20,3 +19,4 @@ dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 # Call function
 #displayInventory(inventory)
 addToInventory(inventory, dragonLoot)
+print(inventory)
